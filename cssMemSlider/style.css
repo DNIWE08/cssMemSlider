@@ -47,19 +47,19 @@ body {
 }
 
 #img-1 {
-  background-image: url(./bat.png);
+  background-image: url(./images/y0OP5LLqNac.jpg);
 }
 #img-2 {
-  background-image: url(./beetle.png);
+  background-image: url(./images/0TagmOfveFQ.jpg);
 }
 #img-3 {
-  background-image: url(./boar.png);
+  background-image: url(./images/bX5HZebgml4.jpg);
 }
 #img-4 {
-  background-image: url(./buffalo.png);
+  background-image: url(./images/dNmX8OTCBCo.jpg);
 }
 #img-5 {
-  background-image: url(./bullfinch.png);
+  background-image: url(./images/hxW1jLxybsg.jpg);
 }
 
 #img-1,
@@ -92,11 +92,7 @@ body {
   color: #0099ff;
 }
 
-@media (max-width: 60em) {
-  .discription-container {
-    width: 100%;
-  }
-}
+
 
 .first-image-discription,
 .second-image-discription,
@@ -112,7 +108,7 @@ body {
 #fourth-image:checked ~ .discription-container>.fourth-image-discription,
 #fifth-image:checked ~ .discription-container>.fifth-image-discription {
   display: block;
-  animation: 500ms ease-in-out 1 alternate slidemove;
+  animation: 500ms ease-in-out 1 alternate text-animation;
 }
 
 /* --------------------------------- DISCRIPTION --------------------------------- */
@@ -171,5 +167,24 @@ input {
   }
 }
 
+@keyframes text-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 /* --------------------------------- ANIMATION --------------------------------- */
+
+
+@media (max-width: 60em) {
+  .discription-container {
+    width: 100%;
+  }
+  .images-container {
+    min-height: 30%;
+  }
+}
