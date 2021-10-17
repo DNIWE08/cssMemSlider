@@ -1,3 +1,9 @@
+body {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +13,19 @@
 .slider-container {
   width: 100%;
   height: 100vh;
+  padding: 0.5em 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  gap: 1em;
+  background-color: #0b0f1c;
 }
 
+/* --------------------------------- IMAGE --------------------------------- */
+
 .images-container {
-  width: 90%;
-  height: 90%;
+  min-width: 100%;
+  min-height: 70%;
   margin: 0 auto;
   z-index: 1;
   overflow: hidden;
@@ -30,10 +41,36 @@
 #img-3,
 #img-4,
 #img-5 {
+  width: 100%;
+  height: 100%;
   display: none;
 }
 
+#img-1 {
+  background-image: url(./bat.png);
+}
+#img-2 {
+  background-image: url(./beetle.png);
+}
+#img-3 {
+  background-image: url(./boar.png);
+}
+#img-4 {
+  background-image: url(./buffalo.png);
+}
+#img-5 {
+  background-image: url(./bullfinch.png);
+}
 
+#img-1,
+#img-2,
+#img-3,
+#img-4,
+#img-5 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 #first-image:checked ~ .images-container>#img-1,
 #second-image:checked ~ .images-container>#img-2,
@@ -41,6 +78,24 @@
 #fourth-image:checked ~ .images-container>#img-4,
 #fifth-image:checked ~ .images-container>#img-5 {
   display: block;
+  animation: 500ms ease-in-out 1 alternate slidemove;
+}
+
+/* --------------------------------- IMAGE --------------------------------- */
+
+/* --------------------------------- DISCRIPTION --------------------------------- */
+
+.discription-container {
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+  color: #0099ff;
+}
+
+@media (max-width: 60em) {
+  .discription-container {
+    width: 100%;
+  }
 }
 
 .first-image-discription,
@@ -57,4 +112,64 @@
 #fourth-image:checked ~ .discription-container>.fourth-image-discription,
 #fifth-image:checked ~ .discription-container>.fifth-image-discription {
   display: block;
+  animation: 500ms ease-in-out 1 alternate slidemove;
 }
+
+/* --------------------------------- DISCRIPTION --------------------------------- */
+
+/* --------------------------------- INPUT LABELS --------------------------------- */
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 3em;
+}
+
+.input-label {
+  display: block;
+  width: 1em;
+  height: 1em;
+  background-color: #0099ff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input-label:hover {
+  background-color: #4d4aff;
+}
+
+#first-image:checked ~ .input-container>.first-label, 
+#second-image:checked ~ .input-container>.second-label, 
+#third-image:checked ~ .input-container>.third-label, 
+#fourth-image:checked ~ .input-container>.fourth-label, 
+#fifth-image:checked ~ .input-container>.fifth-label {
+  background-color: transparent;
+  border: 5px solid #4d4aff;
+}
+
+/* --------------------------------- INPUT LABELS --------------------------------- */
+
+/* --------------------------------- INPUTS --------------------------------- */
+
+input {
+  display: none;
+}
+
+/* --------------------------------- INPUTS --------------------------------- */
+
+/* --------------------------------- ANIMATION --------------------------------- */
+
+@keyframes slidemove {
+  from {
+    transform: translateX(-1000%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+
+/* --------------------------------- ANIMATION --------------------------------- */
