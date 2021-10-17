@@ -4,35 +4,55 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
   <title>cssMemSlider</title>
 </head>
 <body>
   <div class="slider-container">
+
+    <input class="input-radio" type="radio" name="slider" id="first-image" checked>
+    <input class="input-radio" type="radio" name="slider" id="second-image">
+    <input class="input-radio" type="radio" name="slider" id="third-image">
+    <input class="input-radio" type="radio" name="slider" id="fourth-image">
+    <input class="input-radio" type="radio" name="slider" id="fifth-image">
+    
     <div class="images-container">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
+
+
+      <div class="image-container first-image" id="img-1">
+        <img src="./bat.png" alt="">
+      </div>
+      <div class="image-container second-image" id="img-2">
+        <img src="./beetle.png" alt="">
+      </div>
+      <div class="image-container third-image" id="img-3">
+        <img src="./boar.png" alt="">
+      </div>
+      <div class="image-container fourth-image" id="img-4">
+        <img src="./buffalo.png" alt="">
+      </div>
+      <div class="image-container fifth-image" id="img-5">
+        <img src="./bullfinch.png" alt="">
+      </div>
+
     </div>
-    <form action="">
 
-      <div class="input-container">
-        <input class="input-radio" type="radio" name="slider" id="first-image">
-        <input class="input-radio" type="radio" name="slider" id="second-image">
-        <input class="input-radio" type="radio" name="slider" id="third-image">
-        <input class="input-radio" type="radio" name="slider" id="fourth-image">
-        <input class="input-radio" type="radio" name="slider" id="fifth-image">
-      </div>
-      <div class="discription-container">
-        <p class="discription first-image">Text for first image</p>
-        <p class="discription second-image">Text for second image</p>
-        <p class="discription third-image">Text for third image</p>
-        <p class="discription fourth-image">Text for fourth image</p>
-        <p class="discription fifth-image">Text for fifth image</p>
-      </div>
+    <div class="input-container">
+      <label for="first-image"></label>
+      <label for="second-image"></label>
+      <label for="third-image"></label>
+      <label for="fourth-image"></label>
+      <label for="fifth-image"></label>
+    </div>
 
-    </form>
+    <div class="discription-container">
+      <p class="discription first-image-discription">Text for first image</p>
+      <p class="discription second-image-discription">Text for second image</p>
+      <p class="discription third-image-discription">Text for third image</p>
+      <p class="discription fourth-image-discription">Text for fourth image</p>
+      <p class="discription fifth-image-discription">Text for fifth image</p>
+    </div>
+
   </div>
 </body>
 </html>

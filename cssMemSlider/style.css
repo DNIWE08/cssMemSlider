@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.images-container {
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+}
+
+#img-1,
+#img-2,
+#img-3,
+#img-4,
+#img-5 {
+  display: none;
+}
+
+
+
+#first-image:checked ~ .images-container>#img-1,
+#second-image:checked ~ .images-container>#img-2,
+#third-image:checked ~ .images-container>#img-3,
+#fourth-image:checked ~ .images-container>#img-4,
+#fifth-image:checked ~ .images-container>#img-5 {
+  display: block;
+}
+
+.first-image-discription,
+.second-image-discription,
+.third-image-discription,
+.fourth-image-discription,
+.fifth-image-discription {
+  display: none;
+}
+
+#first-image:checked ~ .discription-container>.first-image-discription,
+#second-image:checked ~ .discription-container>.second-image-discription,
+#third-image:checked ~ .discription-container>.third-image-discription,
+#fourth-image:checked ~ .discription-container>.fourth-image-discription,
+#fifth-image:checked ~ .discription-container>.fifth-image-discription {
+  display: block;
+}
